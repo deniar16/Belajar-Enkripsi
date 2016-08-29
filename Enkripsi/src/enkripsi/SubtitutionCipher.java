@@ -25,12 +25,12 @@ public class SubtitutionCipher {
                 posisi = Integer.valueOf(new String(abjad).indexOf(charPasswd));
                 if (indexKarakter % 2 == 0) {
                     posisi = posisi + (keyMinute % 52);
-                    if (posisi > 52) {
+                    if (posisi >= 52) {
                         posisi = posisi - 52;
                     }
                 } else if (indexKarakter % 2 == 1) {
                     posisi = posisi + (keyHour % 52);
-                    if (posisi > 52) {
+                    if (posisi >= 52) {
                         posisi = posisi - 52;
                     }
                 }
